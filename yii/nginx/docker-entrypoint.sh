@@ -18,6 +18,9 @@ if [[ "$(ls -A "/var/www/")" ]] ;
         echo "If the Directory is not empty, please delete the hidden files and directory"
     else
         sudo composer create-project --prefer-dist yiisoft/yii2-app-basic .
+        php init --env=Development --overwrite=All --delete=All
+        sudo cp /app/index.php /var/www/
+        sudo cp /app/favicon.ico /var/www/
 fi
 
 sudo cp /app/default.conf /etc/nginx/conf.d/default.conf
@@ -25,7 +28,5 @@ nginx -s reload
 sudo chown -R nobody:nobody /var/www 2> /dev/null
 
 sudo rm -rf /var/preview 2> /dev/null
-
-sudo php artisan key:generate
 
 exec "$@"

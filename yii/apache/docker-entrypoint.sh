@@ -17,13 +17,16 @@ if [[ "$(ls -A "/var/www/")" ]] ;
     then
         echo "If the Directory is not empty, please delete the hidden files and directory"
     else
-        sudo composer create-project --prefer-dist yiisoft/yii2-app-basic .
+        sudo composer create-project --prefer-dist yiisoft/yii2-app-advanced .
+        php init --env=Development --overwrite=All --delete=All
+        sudo cp /app/index.php /var/www/
+        sudo cp /app/favicon.ico /var/www/
 fi
 sudo cp /app/httpd.conf /etc/apache2/httpd.conf
 httpd -k graceful
 sudo chown -R apache:apache /var/www 2> /dev/null
 rm -rf /var/preview 2> /dev/null
 
-sudo php artisan key:generate
+
 
 exec "$@"

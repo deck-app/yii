@@ -7,11 +7,13 @@ RUN mkdir -p /app
 RUN mkdir -p /var/preview
 COPY httpd.conf /app/httpd.conf
 COPY httpd.conf /etc/apache2/httpd.conf
+COPY favicon.ico /app/favicon.ico
+COPY index.php /app/index.php
 RUN wget -O /var/preview/index.html https://raw.githubusercontent.com/deck-app/stack-preview-screen/main/install/index.html
 
 ARG SERVER_ROOT
 RUN sed -i "s#{SERVER_ROOT}#/var/preview#g" /etc/apache2/httpd.conf
-RUN sed -i "s#{SERVER_ROOT}#/var/www/web#g" /app/httpd.conf
+RUN sed -i "s#{SERVER_ROOT}#/var/www/#g" /app/httpd.conf
 
 # Persistent runtime dependencies
 # Example RUN apk add --no-cache php8-openssl php8-sysvmsg php8-curl

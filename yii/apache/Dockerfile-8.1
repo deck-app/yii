@@ -7,6 +7,8 @@ RUN mkdir -p /app
 RUN mkdir -p /var/preview
 COPY httpd.conf /app/httpd.conf
 COPY httpd.conf /etc/apache2/httpd.conf
+COPY favicon.ico /app/favicon.ico
+COPY index.php /app/index.php
 RUN wget -O /var/preview/index.html https://raw.githubusercontent.com/deck-app/stack-preview-screen/main/install/index.html
 
 ARG SERVER_ROOT
