@@ -13,7 +13,7 @@ RUN wget -O /var/preview/index.html https://raw.githubusercontent.com/deck-app/s
 
 ARG SERVER_ROOT
 RUN sed -i "s#{SERVER_ROOT}#/var/preview#g" /etc/nginx/conf.d/default.conf
-RUN sed -i "s#{SERVER_ROOT}#/var/www/web#g" /app/default.conf
+RUN sed -i "s#{SERVER_ROOT}#/var/www/#g" /app/default.conf
 
 
 # Persistent runtime dependencies
