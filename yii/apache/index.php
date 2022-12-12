@@ -34,8 +34,8 @@
         <div class="container-fluid py-5 text-center">
             <h1 class="display-4">Congratulations!</h1>
             <p class="fs-5 fw-light">You have successfully created your Yii-powered application.</p>
-            <p><a class="btn btn-lg btn-success" href="#">Get started with Frontend</a></p>
-            <p><a class="btn btn-lg btn-success" href="#">Get started with Backend</a></p>
+            <p><a class="btn btn-lg btn-success" href="frontend/web">Get started with Frontend</a></p>
+            <p><a class="btn btn-lg btn-success" href="backend/web">Get started with Backend</a></p>
         </div>
     </div>
 
