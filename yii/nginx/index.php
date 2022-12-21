@@ -19,10 +19,10 @@
 <header>
     <nav id="w0" class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
 <div class="container">
-<a class="navbar-brand" href="index.html">My Application</a>
+<a class="navbar-brand" href="index.php">My Application</a>
 <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#w0-collapse" aria-controls="w0-collapse" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
 <div id="w0-collapse" class="collapse navbar-collapse">
-<ul id="w1" class="navbar-nav me-auto mb-2 mb-md-0 nav"><li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+<ul id="w1" class="navbar-nav me-auto mb-2 mb-md-0 nav"><li class="nav-item"><a class="nav-link active" href="index.php">Home</a></li>
 </div></div>
 </div>
 </nav></header>
@@ -77,7 +77,7 @@
 <footer class="footer mt-auto py-3 text-muted">
     <div class="container">
         <p class="float-start">&copy; My Application 2022</p>
-        <p class="float-end">Powered by <a href="index.html" rel="external">Yii Framework</a></p>
+        <p class="float-end">Powered by <a href="https://www.yiiframework.com/" rel="external">Yii Framework</a></p>
     </div>
 </footer>
 </body>
